@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Biology Study Guides — Skin, Circulation, Blood &amp; Muscle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-deep: #0c1222;
+      --bg-card: rgba(255, 255, 255, 0.06);
+      --bg-card-hover: rgba(255, 255, 255, 0.09);
+      --bg-elevated: rgba(18, 26, 42, 0.85);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-strong: rgba(255, 255, 255, 0.14);
+      --text-primary: #eef2f8;
+      --text-secondary: #9aa8bc;
+      --text-muted: #6b7a92;
+      --accent-teal: #2dd4bf;
+      --accent-teal-dim: rgba(45, 212, 191, 0.15);
+      --accent-rose: #fb7185;
+      --accent-rose-dim: rgba(251, 113, 133, 0.12);
+      --accent-violet: #a78bfa;
+      --accent-violet-dim: rgba(167, 139, 250, 0.14);
+      --accent-amber: #fbbf24;
+      --accent-amber-dim: rgba(251, 191, 36, 0.12);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --shadow-lg: 0 24px 80px rgba(0, 0, 0, 0.45);
+      --font-sans: "Source Sans 3", system-ui, -apple-system, sans-serif;
+      --font-display: "Fraunces", Georgia, serif;
+    }
+
+    h2.sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background: var(--bg-deep);
+      background-image:
+        radial-gradient(ellipse 120% 80% at 10% -20%, rgba(45, 212, 191, 0.18), transparent 50%),
+        radial-gradient(ellipse 90% 60% at 90% 0%, rgba(167, 139, 250, 0.15), transparent 45%),
+        radial-gradient(ellipse 70% 50% at 50% 100%, rgba(251, 113, 133, 0.08), transparent 50%),
+        radial-gradient(ellipse 55% 40% at 75% 85%, rgba(251, 191, 36, 0.06), transparent 45%);
+      background-attachment: fixed;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: clamp(1rem, 4vw, 2.5rem);
+      padding-bottom: 4rem;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+      padding: clamp(1.25rem, 3vw, 2rem) clamp(1rem, 2vw, 1.5rem);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent-teal);
+      background: var(--accent-teal-dim);
+      border: 1px solid rgba(45, 212, 191, 0.25);
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 5vw, 2.35rem);
+      font-weight: 700;
+      font-optical-sizing: auto;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      background: linear-gradient(135deg, #fff 0%, #c8d4e8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      max-width: 36ch;
+      margin: 0 auto;
+    }
+
+    .shell {
+      background: var(--bg-elevated);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 1rem 1rem 0.75rem;
+      background: rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .tab-btn {
+      flex: 1 1 auto;
+      min-width: min(100%, 140px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      border: 1px solid transparent;
+      border-radius: var(--radius-md) var(--radius-md) 0 0;
+      background: transparent;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.15s;
+    }
+
+    .tab-btn .tab-emoji {
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
+    .tab-btn:hover:not(.active) {
+      color: var(--text-secondary);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .tab-btn:focus-visible {
+      outline: 2px solid var(--accent-violet);
+      outline-offset: 2px;
+    }
+
+    .tab-btn.active {
+      color: var(--text-primary);
+      background: rgba(255, 255, 255, 0.06);
+      border-color: var(--border-strong);
+      border-bottom-color: transparent;
+      margin-bottom: -1px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tab-btn.active[data-tab="skin"] {
+      box-shadow: inset 0 -3px 0 var(--accent-teal);
+    }
+
+    .tab-btn.active[data-tab="circ"] {
+      box-shadow: inset 0 -3px 0 var(--accent-rose);
+    }
+
+    .tab-btn.active[data-tab="blood"] {
+      box-shadow: inset 0 -3px 0 #f87171;
+    }
+
+    .tab-btn.active[data-tab="muscle"] {
+      box-shadow: inset 0 -3px 0 var(--accent-amber);
+    }
+
+    .content {
+      padding: clamp(1.25rem, 3vw, 1.75rem);
+    }
+
+    .panel {
+      display: none;
+      animation: fadeIn 0.35s ease;
+    }
+
+    .panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .section-toggle {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.15rem;
+      margin-bottom: 0.5rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      text-align: left;
+      transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .section-toggle:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-strong);
+    }
+
+    .section-toggle:focus-visible {
+      outline: 2px solid var(--accent-violet);
+      outline-offset: 2px;
+    }
+
+    .section-toggle .toggle-left {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .section-toggle .toggle-icon {
+      width: 2.25rem;
+      height: 2.25rem;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .section-toggle .arrow {
+      flex-shrink: 0;
+      width: 1.75rem;
+      height: 1.75rem;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      font-size: 0.65rem;
+      color: var(--text-secondary);
+      background: rgba(255, 255, 255, 0.06);
+      transition: transform 0.25s ease;
+    }
+
+    .section-toggle.open .arrow {
+      transform: rotate(180deg);
+    }
+
+    .section-body {
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: clamp(1rem, 2.5vw, 1.35rem);
+      margin-bottom: 1rem;
+      background: rgba(0, 0, 0, 0.15);
+      display: none;
+    }
+
+    .section-body.open {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    h3 {
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-violet);
+      margin: 1.5rem 0 0.65rem;
+    }
+
+    h3:first-child {
+      margin-top: 0;
+    }
+
+    p,
+    li {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+
+    p {
+      margin-bottom: 0.5rem;
+    }
+
+    p strong,
+    li strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    ul {
+      padding-left: 1.25rem;
+      margin: 0.5rem 0 0.75rem;
+    }
+
+    li {
+      margin: 0.35rem 0;
+    }
+
+    li::marker {
+      color: var(--accent-teal);
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin: 0 0.35rem 0.4rem 0;
+      border: 1px solid transparent;
+    }
+
+    .pill-teal {
+      background: var(--accent-teal-dim);
+      color: #5eead4;
+      border-color: rgba(45, 212, 191, 0.25);
+    }
+
+    .pill-purple {
+      background: var(--accent-violet-dim);
+      color: #c4b5fd;
+      border-color: rgba(167, 139, 250, 0.25);
+    }
+
+    .pill-coral {
+      background: var(--accent-rose-dim);
+      color: #fda4af;
+      border-color: rgba(251, 113, 133, 0.25);
+    }
+
+    .table-scroll {
+      overflow-x: auto;
+      margin: 0.75rem 0;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+      -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+      width: 100%;
+      min-width: 520px;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+
+    th {
+      text-align: left;
+      padding: 0.65rem 0.85rem;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-bottom: 1px solid var(--border-strong);
+    }
+
+    td {
+      padding: 0.75rem 0.85rem;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tbody tr {
+      transition: background 0.15s;
+    }
+
+    tbody tr:hover {
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .qa-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .qa-item {
+      padding: 1rem 1rem 1rem 1.15rem;
+      border-radius: var(--radius-md);
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-left: 3px solid var(--accent-teal);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .qa-item:hover {
+      border-left-color: #5eead4;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .qa-q {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.45rem;
+      line-height: 1.5;
+    }
+
+    .qa-a {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    .qa-a strong {
+      color: #5eead4;
+      font-weight: 600;
+    }
+
+    .note-box {
+      position: relative;
+      background: linear-gradient(135deg, var(--accent-violet-dim), rgba(167, 139, 250, 0.06));
+      border: 1px solid rgba(167, 139, 250, 0.25);
+      border-left: 4px solid var(--accent-violet);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 0.85rem 1rem;
+      margin: 0.85rem 0;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    .note-box strong {
+      color: #ddd6fe;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+      margin: 1.35rem 0;
+    }
+
+    .flow-note {
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-secondary);
+    }
+
+    .flow {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: 0.85rem 0;
+    }
+
+    .flow-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 0.75rem 1rem;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      position: relative;
+    }
+
+    .flow-item strong {
+      color: var(--text-primary);
+    }
+
+    .flow-arrow {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--accent-amber);
+      padding: 0.25rem 0;
+      font-weight: 600;
+      opacity: 0.85;
+    }
+
+    @media (max-width: 640px) {
+      .tabs {
+        flex-direction: column;
+      }
+
+      .tab-btn {
+        border-radius: var(--radius-md);
+        margin-bottom: 0;
+      }
+
+      .tab-btn.active {
+        margin-bottom: 0;
+        border-bottom-color: var(--border-strong);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+    <header class="hero">
+      <span class="hero-badge">Study guide</span>
+      <h1>Biology Study Guides</h1>
+      <p>Skin, circulation, blood &amp; lymph, plus the muscular system — notes and practice in one file.</p>
+    </header>
+
+    <h2 class="sr-only">Biology study guides: Skin and integumentary system, circulatory system, blood and lymphatic system, and muscular system — notes and Q&amp;A</h2>
+
+    <div class="shell">
+      <div class="tabs" role="tablist" aria-label="Worksheet topics">
+        <button type="button" class="tab-btn active" data-tab="skin" role="tab" aria-selected="true" aria-controls="panel-skin" id="tab-skin" onclick="switchTab(event, 'skin')">
+          <span class="tab-emoji" aria-hidden="true">🫧</span>
+          <span>Skin &amp; Integumentary</span>
+        </button>
+        <button type="button" class="tab-btn" data-tab="circ" role="tab" aria-selected="false" aria-controls="panel-circ" id="tab-circ" onclick="switchTab(event, 'circ')">
+          <span class="tab-emoji" aria-hidden="true">❤️</span>
+          <span>Circulatory System</span>
+        </button>
+        <button type="button" class="tab-btn" data-tab="blood" role="tab" aria-selected="false" aria-controls="panel-blood" id="tab-blood" onclick="switchTab(event, 'blood')">
+          <span class="tab-emoji" aria-hidden="true">🩸</span>
+          <span>Blood &amp; Lymphatic</span>
+        </button>
+        <button type="button" class="tab-btn" data-tab="muscle" role="tab" aria-selected="false" aria-controls="panel-muscle" id="tab-muscle" onclick="switchTab(event, 'muscle')">
+          <span class="tab-emoji" aria-hidden="true">💪</span>
+          <span>Muscular System</span>
+        </button>
+      </div>
+
+      <div class="content">
+        <!-- ===== SKIN PANEL ===== -->
+        <div id="panel-skin" class="panel active" role="tabpanel" aria-labelledby="tab-skin">
+
+          <button type="button" class="section-toggle open" onclick="toggleSection(this)" aria-expanded="true">
+            <span class="toggle-left">
+              <span class="toggle-icon" aria-hidden="true">📖</span>
+              Notes &amp; Key Concepts
+            </span>
+            <span class="arrow" aria-hidden="true">▼</span>
+          </button>
+          <div class="section-body open">
+            <h3>What is the integumentary system?</h3>
+            <p>Skin + hair + nails. The skin is the body's largest organ.</p>
+
+            <h3>5 Functions</h3>
+            <div>
+              <span class="pill pill-teal">Protection</span>
+              <span class="pill pill-teal">Body temp regulation</span>
+              <span class="pill pill-teal">Excretion</span>
+              <span class="pill pill-teal">Information gathering</span>
+              <span class="pill pill-teal">Vitamin D production</span>
+            </div>
+            <ul>
+              <li>Protection: blocks pathogens, UV radiation, and water loss</li>
+              <li>Temperature: releases excess heat, retains some body heat</li>
+              <li>Excretion: sweat glands release salts and urea</li>
+              <li>Info gathering: sensory receptors for pressure, pain, heat, cold</li>
+              <li>Vitamin D: skin uses sunlight to produce it (NOT vitamin B)</li>
+            </ul>
+
+            <div class="divider"></div>
+            <h3>3 Layers of Skin</h3>
+            <div class="table-scroll">
+              <table>
+                <tr><th>Layer</th><th>Location</th><th>Key Features</th></tr>
+                <tr><td><strong>Epidermis</strong></td><td>Outer (what you see)</td><td>Upper layer = dead cells. Inner layer = stem cells dividing rapidly. Contains <em>keratin</em> (tough fibrous protein) and <em>melanocytes</em> (make melanin — brown pigment that absorbs UV)</td></tr>
+                <tr><td><strong>Dermis</strong></td><td>Middle / inner thick layer</td><td>Contains blood vessels, nerves, sebaceous glands, sweat glands, hair follicles, muscles. Regulates body temp via blood vessel dilation/constriction.</td></tr>
+                <tr><td><strong>Hypodermis</strong></td><td>Deepest layer</td><td>Fat + connective tissue. Insulates the body.</td></tr>
+              </table>
+            </div>
+
+            <div class="divider"></div>
+            <h3>Key Structures &amp; Their Jobs</h3>
+            <ul>
+              <li><strong>Sebaceous glands</strong> → secrete <em>sebum</em> (oily substance that keeps epidermis flexible, waterproof, and kills bacteria)</li>
+              <li><strong>Sweat glands</strong> → excrete salts and urea; sweat evaporates → cools body</li>
+              <li><strong>Hair follicles</strong> → pockets in epidermis extending into dermis; rapid cell growth at base causes hair to grow</li>
+              <li><strong>Nails</strong> → nail root = rapidly dividing cells at fingertips/toes that fill with keratin</li>
+              <li><strong>Blood vessels in dermis</strong> → narrow when body needs to conserve heat; widen when body needs to release heat</li>
+            </ul>
+            <div class="note-box">Both hair and nails are made of <strong>keratin</strong> — the same protein made by skin cells.</div>
+
+            <h3>Hair Functions by Location</h3>
+            <ul>
+              <li>Head hair → protects scalp from sun</li>
+              <li>Nose hair → keeps dust out of lungs</li>
+              <li>Ear hair → keeps sand/particles out</li>
+              <li>Eyelashes → keep dirt and bugs out of eyes</li>
+              <li>Body hair → provides insulation from cold</li>
+            </ul>
+
+            <div class="divider"></div>
+            <h3>Skin Problems</h3>
+            <div class="table-scroll">
+              <table>
+                <tr><th>Problem</th><th>Description</th><th>Cause</th></tr>
+                <tr><td>Acne</td><td>Red bumps, may contain pus, may leave scars</td><td>Sebum + dead skin cells plug hair follicles + bacterial infection</td></tr>
+                <tr><td>Hives</td><td>Red welts</td><td>Allergic reactions to food or medicines</td></tr>
+                <tr><td>Skin cancer</td><td>Abnormal growths or sores that don't heal</td><td>Excessive exposure to UV radiation (sun, tanning beds)</td></tr>
+              </table>
+            </div>
+          </div>
+
+          <button type="button" class="section-toggle" onclick="toggleSection(this)" aria-expanded="false">
+            <span class="toggle-left">
+              <span class="toggle-icon" aria-hidden="true">✅</span>
+              Questions &amp; Answers
+            </span>
+            <span class="arrow" aria-hidden="true">▼</span>
+          </button>
+          <div class="section-body">
+            <div class="qa-list">
+              <div class="qa-item">
+                <div class="qa-q">True/False: Protection from pathogens, water loss, and UV radiation are functions of the dermis.</div>
+                <div class="qa-a"><strong>False</strong> — these are functions of the overall integumentary system / epidermis, not the dermis specifically.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">True/False: The skin releases excess heat but holds in some body heat.</div>
+                <div class="qa-a"><strong>True</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">True/False: Sweat contains salts and urea excreted by the skin.</div>
+                <div class="qa-a"><strong>True</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">True/False: The skin has sensory receptors for both pressure and pain.</div>
+                <div class="qa-a"><strong>True</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">True/False: The skin needs sunlight to produce vitamin B.</div>
+                <div class="qa-a"><strong>False</strong> — it produces <strong>vitamin D</strong>, not B.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">The inner layer of the epidermis includes __ cells that divide rapidly.</div>
+                <div class="qa-a"><strong>Stem</strong> cells</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Epidermal cells called __ produce the brown pigment __.</div>
+                <div class="qa-a"><strong>Melanocytes</strong> produce <strong>melanin</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">The brown pigment in skin protects it by absorbing __.</div>
+                <div class="qa-a"><strong>Ultraviolet (UV) radiation</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Structures that excrete salts and urea from skin are called __.</div>
+                <div class="qa-a"><strong>Sweat glands</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">The __ produce a fluid that kills bacteria.</div>
+                <div class="qa-a"><strong>Sebaceous glands</strong> (via sebum)</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Both hair and __ contain keratin.</div>
+                <div class="qa-a"><strong>Nails</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">How does the dermis help regulate body temperature?</div>
+                <div class="qa-a">Blood vessels in dermis <strong>narrow to conserve heat</strong>; they <strong>widen to release heat</strong> from the body's core to the skin.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">How does sweat keep you cool?</div>
+                <div class="qa-a">When sweat <strong>evaporates</strong>, it takes heat away from your body.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">What is the function of sebum?</div>
+                <div class="qa-a">Keeps epidermis <strong>flexible and waterproof</strong>; also <strong>kills bacteria</strong> on the skin.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">What is a nail root?</div>
+                <div class="qa-a">An area of <strong>rapidly dividing cells</strong> near the tips of fingers and toes where nails grow.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Why is a third-degree burn (damages epidermis AND dermis) very serious?</div>
+                <div class="qa-a">It leaves the body <strong>unprotected from pathogens</strong> (risk of infection) and disrupts homeostasis — destroying the ability to <strong>regulate temperature, water loss, and excrete wastes</strong>.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">In which layer are sweat glands found?</div>
+                <div class="qa-a"><strong>Dermis</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Which layer provides a tough, flexible covering for the body?</div>
+                <div class="qa-a"><strong>Epidermis</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Which layer helps insulate the body?</div>
+                <div class="qa-a"><strong>Hypodermis</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Excessive UV radiation causes which skin problem?</div>
+                <div class="qa-a"><strong>Skin cancer</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== CIRCULATORY PANEL ===== -->
+        <div id="panel-circ" class="panel" role="tabpanel" aria-labelledby="tab-circ" hidden>
+
+          <button type="button" class="section-toggle open" onclick="toggleSection(this)" aria-expanded="true">
+            <span class="toggle-left">
+              <span class="toggle-icon" aria-hidden="true">📖</span>
+              Notes &amp; Key Concepts
+            </span>
+            <span class="arrow" aria-hidden="true">▼</span>
+          </button>
+          <div class="section-body open">
+            <h3>Function of the Circulatory System</h3>
+            <p>Transports oxygen, nutrients, and other substances throughout the body. Removes wastes from tissues.</p>
+
+            <div class="divider"></div>
+            <h3>The Heart</h3>
+            <ul>
+              <li><strong>Myocardium</strong> = the muscle layer of the heart; its contractions pump blood</li>
+              <li>The heart has <strong>4 chambers</strong>: right atrium, right ventricle, left atrium, left ventricle</li>
+              <li><strong>Septum</strong> = wall that separates the right side from the left side</li>
+              <li><strong>Atrium (upper)</strong> = receives blood coming in from the body</li>
+              <li><strong>Ventricle (lower)</strong> = pumps blood out of the heart</li>
+              <li><strong>Valves</strong> = flaps of connective tissue between atria/ventricles and between ventricles/blood vessels; keep blood moving in ONE direction</li>
+            </ul>
+
+            <div class="divider"></div>
+            <h3>2 Circulation Pathways</h3>
+            <div class="table-scroll">
+              <table>
+                <tr><th>Pathway</th><th>Side of Heart</th><th>Destination</th><th>Blood Change</th></tr>
+                <tr><td><strong>Pulmonary</strong></td><td>Right side</td><td>Lungs</td><td>Oxygen-poor → Oxygen-rich (picks up O₂, releases CO₂)</td></tr>
+                <tr><td><strong>Systemic</strong></td><td>Left side</td><td>Rest of body</td><td>Oxygen-rich → Oxygen-poor (cells absorb O₂, load CO₂)</td></tr>
+              </table>
+            </div>
+            <div class="note-box">The left side is larger and more muscular than the right — it pumps blood through the entire body, not just the lungs.</div>
+
+            <div class="divider"></div>
+            <h3>How the Heart Beats (Electrical System)</h3>
+            <p class="flow-note">SA node fires → impulse spreads through atria → atria contract → AV node picks up impulse → impulse delayed (atria pump blood to ventricles) → AV node spreads impulse through ventricles → ventricles contract → blood pumped out</p>
+            <ul>
+              <li><strong>SA node (sinoatrial node)</strong> = pacemaker; triggers atria to contract</li>
+              <li><strong>AV node (atrioventricular node)</strong> = triggers ventricles to contract</li>
+              <li>Nervous system influences SA node → increases or decreases heart rate</li>
+            </ul>
+
+            <div class="divider"></div>
+            <h3>3 Types of Blood Vessels</h3>
+            <div class="table-scroll">
+              <table>
+                <tr><th>Vessel</th><th>Structure</th><th>Function</th></tr>
+                <tr><td><strong>Arteries</strong></td><td>Thick, elastic walls; connective tissue + smooth muscle</td><td>Carry blood <em>away from</em> the heart to body tissues. All carry oxygen-rich blood EXCEPT pulmonary arteries.</td></tr>
+                <tr><td><strong>Capillaries</strong></td><td>Smallest vessels; extremely thin walls</td><td>O₂ and nutrients diffuse into tissues; wastes move into blood. Site of actual exchange.</td></tr>
+                <tr><td><strong>Veins</strong></td><td>Large vessels; many have valves to prevent backflow</td><td>Carry blood <em>toward</em> the heart. Return blood from body to heart.</td></tr>
+              </table>
+            </div>
+
+            <div class="divider"></div>
+            <h3>Blood Pressure</h3>
+            <ul>
+              <li>= wave of fluid pressure in arteries created by heart contractions</li>
+              <li>Regulated by the brain and kidneys</li>
+              <li>When BP falls → nervous system → neurotransmitters <em>relax</em> smooth muscles in vessel walls</li>
+              <li>When BP rises → nervous system → neurotransmitters cause smooth muscles to <em>contract</em></li>
+            </ul>
+          </div>
+
+          <button type="button" class="section-toggle" onclick="toggleSection(this)" aria-expanded="false">
+            <span class="toggle-left">
+              <span class="toggle-icon" aria-hidden="true">✅</span>
+              Questions &amp; Answers
+            </span>
+            <span class="arrow" aria-hidden="true">▼</span>
+          </button>
+          <div class="section-body">
+            <div class="qa-list">
+              <div class="qa-item">
+                <div class="qa-q">Why do large multicellular animals need a circulatory system while simple animals don't?</div>
+                <div class="qa-a">Simple animals have cells in direct contact with the environment — diffusion handles everything. Large organisms have cells <strong>far from the environment</strong>, so they need a system to deliver O₂/nutrients and remove wastes.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">City analogy: if streets = circulatory system, what does a city represent?</div>
+                <div class="qa-a">The <strong>body</strong>. Streets/highways = blood vessels, delivery people = blood cells, supplies (food) = O₂ and nutrients, garbage = CO₂ and waste products.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Pulmonary circulation: which side of heart, where does blood go, what blood change?</div>
+                <div class="qa-a"><strong>Right side → Lungs → Oxygen-poor becomes oxygen-rich</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Systemic circulation: which side of heart, where does blood go, what blood change?</div>
+                <div class="qa-a"><strong>Left side → Body → Oxygen-rich becomes oxygen-poor</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">What is the SA node and why is it called the pacemaker?</div>
+                <div class="qa-a">A small group of cardiac muscle fibers (sinoatrial node) that <strong>fires electrical impulses</strong> to start each heartbeat by triggering atria to contract.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">What does the AV node do?</div>
+                <div class="qa-a">Picks up the impulse from the SA node, delays it while the atria pump blood to the ventricles, then <strong>spreads impulses through the ventricles</strong> causing them to contract.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Where does oxygen-rich blood from the lungs enter the heart?</div>
+                <div class="qa-a"><strong>Left atrium</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">What part of the heart pumps oxygen-poor blood to the lungs?</div>
+                <div class="qa-a"><strong>Right ventricle</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Which vessel returns blood from the head and arms to the heart?</div>
+                <div class="qa-a"><strong>Superior vena cava</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Which pulmonary blood vessel carries oxygen-rich blood?</div>
+                <div class="qa-a"><strong>Pulmonary vein</strong> (remember: veins return to heart; by the time blood is returning from the lungs it's oxygen-rich)</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Why are artery walls thicker than vein walls?</div>
+                <div class="qa-a">Arteries carry blood <strong>directly from the heart</strong> under high pressure — they need to be stronger and more elastic to withstand the pumping force.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Why is the left side of the heart larger and more muscular than the right?</div>
+                <div class="qa-a">The left side pumps blood through the <strong>entire body (systemic)</strong>; the right side only pumps to the lungs. More distance = more force needed.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== BLOOD & LYMPHATIC PANEL ===== -->
+        <div id="panel-blood" class="panel" role="tabpanel" aria-labelledby="tab-blood" hidden>
+
+          <button type="button" class="section-toggle open" onclick="toggleSection(this)" aria-expanded="true">
+            <span class="toggle-left">
+              <span class="toggle-icon" aria-hidden="true">📖</span>
+              Notes &amp; Key Concepts
+            </span>
+            <span class="arrow" aria-hidden="true">▼</span>
+          </button>
+          <div class="section-body open">
+            <h3>Blood — 4 Components</h3>
+            <div class="table-scroll">
+              <table>
+                <tr><th>Component</th><th>Characteristics</th><th>Function</th></tr>
+                <tr><td><strong>Plasma</strong></td><td>Straw-colored fluid; ~90% water + dissolved gases, salts, nutrients, enzymes, hormones, waste products, plasma proteins (albumin, globulins, fibrinogen), cholesterol</td><td>Controls body temp, transports substances (fatty acids, hormones, vitamins), helps with osmotic pressure and blood clotting</td></tr>
+                <tr><td><strong>Red blood cells</strong></td><td>Disk-shaped, thinner in center. Contain <em>hemoglobin</em> (iron-containing protein) — gives blood its red color</td><td>Hemoglobin binds O₂ in lungs and releases it in capillaries. Transport O₂ to cells and some CO₂ to lungs.</td></tr>
+                <tr><td><strong>White blood cells</strong></td><td>Types: macrophages, B lymphocytes, T lymphocytes</td><td>Macrophages engulf pathogens. B lymphocytes produce antibodies. T lymphocytes fight tumors and viruses. Overall: guard against infection.</td></tr>
+                <tr><td><strong>Platelets</strong></td><td>Fragments of cytoplasm of bone marrow cells; enclosed in a membrane</td><td>Cluster around wounds → release clotting factors → form fibrin (sticky filaments) → clot that stops bleeding</td></tr>
+              </table>
+            </div>
+            <div class="note-box">Human body contains <strong>4–6 liters</strong> of blood (NOT 8–10). Plasma is ~<strong>90%</strong> water (NOT 50%). Albumin/globulins/fibrinogen are <strong>proteins</strong> (NOT nucleic acids).</div>
+
+            <div class="divider"></div>
+            <h3>Clotting Steps</h3>
+            <p class="flow-note">Injury occurs → <strong>platelets clump</strong> at injury site → release proteins → formation of <strong>fibrin</strong> (sticky filaments) → fibrin mesh forms a <strong>clot</strong> → bleeding stops.</p>
+
+            <div class="divider"></div>
+            <h3>The Lymphatic System</h3>
+            <ul>
+              <li>Network of <strong>vessels, nodes, and organs</strong> that collects fluid leaking out of capillaries, screens it for microorganisms, and returns it to the circulatory system</li>
+              <li><strong>Lymph</strong> = fluid that consists of blood components that moved through capillary walls</li>
+              <li><strong>Lymph nodes</strong> = filter nodes that trap microorganisms, stray cancer cells, and debris; white blood cells there destroy cellular trash. If many microorganisms are trapped → <strong>nodes become swollen</strong></li>
+              <li>Lymph is moved by <strong>pressure from skeletal muscles</strong> (NOT by the heart)</li>
+              <li><strong>Valves</strong> in lymph vessels prevent backflow</li>
+              <li>Lymph returns to bloodstream through <strong>veins just below the shoulders</strong></li>
+              <li>Picks up <strong>fats and fat-soluble vitamins</strong> from digestive tract</li>
+              <li><strong>Spleen</strong> = lymphatic organ that stores platelets</li>
+              <li><strong>Thymus</strong> = also a lymphatic organ</li>
+            </ul>
+
+            <div class="divider"></div>
+            <h3>3 Circulatory System Diseases</h3>
+            <div class="table-scroll">
+              <table>
+                <tr><th>Disease</th><th>What Happens</th><th>Key Notes</th></tr>
+                <tr><td><strong>Heart disease / Atherosclerosis</strong></td><td>Fatty deposits (plaques) build up in artery walls → arteries stiffen</td><td>Can cause <em>angina</em> (chest pain from restricted blood flow), <em>heart failure</em> (heart damaged by O₂ deprivation), <em>heart attack</em> (plaque cap ruptures + clot blocks artery → heart muscle tissue damaged/dies)</td></tr>
+                <tr><td><strong>Stroke</strong></td><td>Clot blocks blood vessel in brain → brain cells die suddenly</td><td>Can also occur if a weak vessel breaks (bleeding in brain). Same mechanism as heart attack but in the brain.</td></tr>
+                <tr><td><strong>Hypertension (high BP)</strong></td><td>BP consistently above 140/90</td><td>Damages heart and blood vessels. Causes small tears in vessels where plaques form. Leads to heart attack, stroke, kidney damage.</td></tr>
+              </table>
+            </div>
+
+            <div class="divider"></div>
+            <h3>Cholesterol &amp; Circulatory Disease</h3>
+            <ul>
+              <li>Cholesterol = lipid that is part of animal cell membranes</li>
+              <li>Transported by <strong>LDL</strong> (low-density lipoprotein) and <strong>HDL</strong> (high-density lipoprotein)</li>
+              <li>Made in the <strong>liver</strong>; also comes from foods high in fat</li>
+              <li>Normal cholesterol range: <strong>100–200 mg/dL</strong></li>
+              <li><strong>Normal liver cells</strong>: LDL binds receptors → taken into cell → stored/used. If cholesterol levels are high → liver stops producing more. ✓</li>
+              <li><strong>Defective liver cells</strong>: LDL cannot bind receptors → cholesterol stays in blood + liver keeps producing more → excess cholesterol deposits in arteries → atherosclerosis ✗</li>
+              <li>High-fat diets → liver cells store extra cholesterol → stop making LDL receptors → cholesterol not removed → deposited in arteries</li>
+              <li>Prevention: low-fat diet prevents LDL from rising; exercise keeps heart muscles strong</li>
+            </ul>
+          </div>
+
+          <button type="button" class="section-toggle" onclick="toggleSection(this)" aria-expanded="false">
+            <span class="toggle-left">
+              <span class="toggle-icon" aria-hidden="true">✅</span>
+              Questions &amp; Answers
+            </span>
+            <span class="arrow" aria-hidden="true">▼</span>
+          </button>
+          <div class="section-body">
+            <div class="qa-list">
+              <div class="qa-item">
+                <div class="qa-q">True/False: Blood helps regulate body temperature and fight infections.</div>
+                <div class="qa-a"><strong>True</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">True/False: The human body contains 8–10 liters of blood.</div>
+                <div class="qa-a"><strong>False</strong> — it contains <strong>4–6 liters</strong>.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">True/False: Plasma is about 50% water.</div>
+                <div class="qa-a"><strong>False</strong> — plasma is about <strong>90% water</strong>.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">True/False: Albumin, globulins, and fibrinogen are nucleic acids in blood.</div>
+                <div class="qa-a"><strong>False</strong> — they are <strong>proteins</strong>.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">True/False: Fibrinogen is necessary for blood clotting.</div>
+                <div class="qa-a"><strong>True</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Fluid and small particles that leave the blood are collectively called __.</div>
+                <div class="qa-a"><strong>Lymph</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">How does lymph help protect against infection?</div>
+                <div class="qa-a">It <strong>screens for microorganisms</strong> (lymph nodes act as filters trapping pathogens and debris).</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">What moves lymph into ducts?</div>
+                <div class="qa-a"><strong>Pressure from skeletal muscles</strong> (not the heart)</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Where does lymph return to the bloodstream?</div>
+                <div class="qa-a">Through <strong>veins just below the shoulders</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">What nutrients does the lymphatic system pick up in the digestive tract?</div>
+                <div class="qa-a"><strong>Fats and fat-soluble vitamins</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Which is NOT a function of lymph nodes: (a) pumping blood to lungs (b) trapping microorganisms (c) collecting cancer cells</div>
+                <div class="qa-a"><strong>(a) Pumping blood to the lungs</strong> — that's the heart's job.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Which organ of the lymphatic system stores platelets?</div>
+                <div class="qa-a"><strong>Spleen</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Why is the first sign of a circulatory problem usually in the heart or brain?</div>
+                <div class="qa-a">Tissues of these <strong>vital organs begin to die within moments</strong> if their oxygen supply is interrupted.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">What is atherosclerosis?</div>
+                <div class="qa-a">A condition where <strong>fatty deposits (plaques) build up in artery walls</strong> and cause arteries to stiffen.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">What is angina and what causes it?</div>
+                <div class="qa-a"><strong>Chest pain</strong> caused by <strong>restricted blood flow to the heart</strong>.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">What is a heart attack and what causes most?</div>
+                <div class="qa-a">Blood flow to heart muscle tissue is blocked → tissue is damaged/dies. Usually caused when a <strong>plaque cap ruptures</strong> and a blood clot completely blocks an artery.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">How is a stroke similar to a heart attack?</div>
+                <div class="qa-a">Same mechanism — a <strong>clot blocks blood supply to tissue</strong>, but in the <strong>brain</strong> (stroke) instead of the heart (heart attack).</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">How does high blood pressure damage the heart?</div>
+                <div class="qa-a">Heart struggles to push blood through vessels. Hypertension also causes <strong>small tears in blood vessels</strong> where atherosclerosis plaques can form.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Cholesterol is transported through the body by __ and __ lipoprotein.</div>
+                <div class="qa-a"><strong>Low-density (LDL)</strong> and <strong>high-density (HDL)</strong> lipoprotein</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">What is the normal cholesterol level range?</div>
+                <div class="qa-a"><strong>100–200 mg/dL</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Cholesterol is made in the __, but also comes from foods high in __.</div>
+                <div class="qa-a"><strong>Liver</strong> / foods high in <strong>fat</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">What did Brown and Goldstein discover about people who eat high-fat diets?</div>
+                <div class="qa-a">They store extra cholesterol in liver cells → cells <strong>stop making LDL receptors</strong> → cholesterol not removed from blood → <strong>deposited in arteries</strong>.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">How can a healthy diet and exercise prevent circulatory diseases?</div>
+                <div class="qa-a">Low-fat diet <strong>prevents LDL levels from rising</strong> → prevents atherosclerosis. Exercise <strong>keeps heart muscles strong</strong> and pumping efficiently.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">What happens when large numbers of microorganisms are trapped in lymph nodes?</div>
+                <div class="qa-a">The lymph nodes become <strong>swollen</strong>.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== MUSCULAR SYSTEM PANEL ===== -->
+        <div id="panel-muscle" class="panel" role="tabpanel" aria-labelledby="tab-muscle" hidden>
+
+          <button type="button" class="section-toggle open" onclick="toggleSection(this)" aria-expanded="true">
+            <span class="toggle-left">
+              <span class="toggle-icon" aria-hidden="true">📖</span>
+              Notes &amp; Key Concepts
+            </span>
+            <span class="arrow" aria-hidden="true">▼</span>
+          </button>
+          <div class="section-body open">
+            <h3>3 Types of Muscle Tissue</h3>
+            <div class="table-scroll">
+              <table>
+                <tr><th>Type</th><th>Striated?</th><th>Control</th><th>Location / Notes</th></tr>
+                <tr><td><strong>Skeletal</strong></td><td>Yes (striations)</td><td>Voluntary</td><td>Attached to bones. Cells = muscle fibers (long, slender, many nuclei). Makes up most of body's muscle mass.</td></tr>
+                <tr><td><strong>Smooth</strong></td><td>No</td><td>Involuntary</td><td>Lines hollow structures (stomach, blood vessels, digestive tract). Spindle-shaped cells, one nucleus.</td></tr>
+                <tr><td><strong>Cardiac</strong></td><td>Yes (striated)</td><td>Involuntary</td><td>Found ONLY in the heart. Smaller cells than skeletal. Connected by gap junctions that allow electrical impulses to pass cell to cell.</td></tr>
+              </table>
+            </div>
+
+            <div class="divider"></div>
+            <h3>Muscle Contraction — How it Works</h3>
+            <ul>
+              <li>Skeletal muscle fibers are packed with <strong>myofibrils</strong> — bundles of protein filaments</li>
+              <li><strong>Myosin</strong> = thick filaments | <strong>Actin</strong> = thin filaments</li>
+              <li>Actin filaments are bound at areas called <strong>Z lines</strong></li>
+              <li><strong>Sarcomere</strong> = two Z lines + the filaments between them (basic unit of contraction)</li>
+              <li>During contraction: <strong>myosin</strong> (powered by <strong>ATP</strong>) forms <strong>cross-bridges</strong> with actin → pulls actin toward center of sarcomere → sarcomere shortens → muscle contracts</li>
+              <li>Motor neurons release <strong>calcium ions</strong> inside muscle fibers to trigger contraction</li>
+              <li>Motor neuron meets muscle fiber at a synapse = <strong>neuromuscular junction</strong></li>
+              <li>Neurotransmitter = <strong>acetylcholine</strong> (carries nerve impulse across synapse to muscle)</li>
+              <li>Stronger contraction = <strong>more muscle fibers</strong> contracting (not harder contraction per fiber)</li>
+            </ul>
+
+            <div class="note-box">Memory trick: <strong>Actin</strong> is shorter word = thinner filament. <strong>Myosin</strong> is longer word = thicker filament.</div>
+
+            <div class="divider"></div>
+            <h3>Muscles and Movement</h3>
+            <ul>
+              <li><strong>Tendons</strong> = strips of connective tissue that attach skeletal muscles to bones</li>
+              <li>Bones act as <strong>levers</strong>, joints act as <strong>fulcrums</strong></li>
+              <li>Muscles work in <strong>opposing pairs</strong> — when one contracts, the other relaxes</li>
+              <li><strong>Biceps contracts</strong> → elbow bends (arm curls up)</li>
+              <li><strong>Triceps contracts</strong> → elbow straightens (arm extends)</li>
+            </ul>
+
+            <div class="divider"></div>
+            <h3>Slow-Twitch vs Fast-Twitch Muscles</h3>
+            <div class="table-scroll">
+              <table>
+                <tr><th>Type</th><th>Also Called</th><th>Mitochondria</th><th>Contains</th><th>Best For</th></tr>
+                <tr><td><strong>Red muscle</strong></td><td>Slow-twitch</td><td>Many</td><td>Myoglobin (stores oxygen)</td><td>Endurance — long periods of work</td></tr>
+                <tr><td><strong>White muscle</strong></td><td>Fast-twitch</td><td>Fewer</td><td>—</td><td>Quick bursts of strength or speed</td></tr>
+              </table>
+            </div>
+            <div class="note-box">Regular exercise maintains muscle strength and flexibility → makes injuries less likely.</div>
+
+            <div class="divider"></div>
+            <h3>Chain of Events That Produce Motion</h3>
+            <div class="flow">
+              <div class="flow-item">Thick (myosin) &amp; thin (actin) filaments slide past each other</div>
+              <div class="flow-arrow" aria-hidden="true">↓</div>
+              <div class="flow-item">Muscle fibers shorten</div>
+              <div class="flow-arrow" aria-hidden="true">↓</div>
+              <div class="flow-item">Muscle contracts</div>
+              <div class="flow-arrow" aria-hidden="true">↓</div>
+              <div class="flow-item">Muscle pulls on tendon</div>
+              <div class="flow-arrow" aria-hidden="true">↓</div>
+              <div class="flow-item">Tendon pulls on bone</div>
+              <div class="flow-arrow" aria-hidden="true">↓</div>
+              <div class="flow-item">Body part moves</div>
+            </div>
+            <div class="note-box">Without tendons → we would NOT be able to move. Each effect becomes the cause of the next event in the chain.</div>
+          </div>
+
+          <button type="button" class="section-toggle" onclick="toggleSection(this)" aria-expanded="false">
+            <span class="toggle-left">
+              <span class="toggle-icon" aria-hidden="true">✅</span>
+              Questions &amp; Answers
+            </span>
+            <span class="arrow" aria-hidden="true">▼</span>
+          </button>
+          <div class="section-body">
+            <div class="qa-list">
+              <div class="qa-item">
+                <div class="qa-q">True/False: Large skeletal muscles have long, slender cells with multiple nuclei.</div>
+                <div class="qa-a"><strong>True</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">True/False: The light and dark bands in skeletal muscles are called Z lines.</div>
+                <div class="qa-a"><strong>False</strong> — they are called <strong>striations</strong>. Z lines are where actin filaments are bound.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">True/False: The cells of smooth muscle are shaped like boxes.</div>
+                <div class="qa-a"><strong>False</strong> — they are shaped like <strong>spindles</strong>.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">True/False: Smooth-muscle tissue lines the inside of blood vessels and the digestive tract.</div>
+                <div class="qa-a"><strong>True</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">True/False: Cardiac muscle is under voluntary control.</div>
+                <div class="qa-a"><strong>False</strong> — cardiac muscle is <strong>involuntary</strong>.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">True/False: Cells in cardiac muscle are connected by gap junctions that allow electrical impulses to pass from cell to cell.</div>
+                <div class="qa-a"><strong>True</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Muscle fibers are filled with __, which are bundles of tightly packed protein filaments.</div>
+                <div class="qa-a"><strong>Myofibrils</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">The thick protein filaments are called __ and the thin protein filaments are called __.</div>
+                <div class="qa-a"><strong>Myosin</strong> (thick) and <strong>actin</strong> (thin)</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">The thick filaments form __ which cause filaments to slide past each other.</div>
+                <div class="qa-a"><strong>Cross-bridges</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">The energy used in muscle contraction is supplied by __.</div>
+                <div class="qa-a"><strong>ATP</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Impulses passed from motor neurons release __ ions within the muscle fibers.</div>
+                <div class="qa-a"><strong>Calcium</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">The difference between a strong and weak muscle contraction is the __ muscle fibers that contract.</div>
+                <div class="qa-a"><strong>Number of</strong> muscle fibers</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">While producing movements, muscles supply the force, bones act as __, and a joint acts as a(n) __.</div>
+                <div class="qa-a"><strong>Levers</strong> / <strong>Fulcrum</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Skeletal muscles work in __ pairs.</div>
+                <div class="qa-a"><strong>Opposing</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Red muscle fibers contain __, which stores oxygen.</div>
+                <div class="qa-a"><strong>Myoglobin</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">White muscle is also called __ muscle.</div>
+                <div class="qa-a"><strong>Fast-twitch</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Many mitochondria are found in __ muscle, which uses oxygen for aerobic respiration.</div>
+                <div class="qa-a"><strong>Red (slow-twitch)</strong></div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">Which muscle contracts when you bend your arm? Which when you extend it?</div>
+                <div class="qa-a"><strong>Biceps</strong> = bend | <strong>Triceps</strong> = extend/straighten</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">What would happen to our ability to move if we did not have tendons?</div>
+                <div class="qa-a">We would <strong>not be able to move</strong> — tendons are the essential link between muscle contractions and bone movement.</div>
+              </div>
+              <div class="qa-item">
+                <div class="qa-q">A tissue sample under a microscope shows striations, long thin fibers with many nuclei and mitochondria. What type of tissue is it?</div>
+                <div class="qa-a"><strong>Skeletal muscle</strong> containing red (slow-twitch) muscle fibers — striated, many nuclei, many mitochondria.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function switchTab(evt, id) {
+      document.querySelectorAll(".tab-btn").forEach(function (b) {
+        b.classList.remove("active");
+        b.setAttribute("aria-selected", "false");
+      });
+      document.querySelectorAll(".panel").forEach(function (p) {
+        p.classList.remove("active");
+        p.hidden = true;
+      });
+      var panel = document.getElementById("panel-" + id);
+      panel.classList.add("active");
+      panel.hidden = false;
+      var btn = evt.currentTarget;
+      btn.classList.add("active");
+      btn.setAttribute("aria-selected", "true");
+    }
+
+    function toggleSection(btn) {
+      var open = btn.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      var body = btn.nextElementSibling;
+      body.classList.toggle("open");
+    }
+  </script>
+</body>
+</html>
