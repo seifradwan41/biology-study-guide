@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Biology Study Guides — Skin, Circulation, Blood &amp; Muscle</title>
+  <meta name="author" content="Abdullah Ahmed, 11A" />
+  <meta name="contributor" content="Seif Eldeen Ahmed" />
+  <title>Biology Study Guides — Abdullah Ahmed, 11A</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
@@ -121,8 +123,98 @@
     .hero p {
       color: var(--text-secondary);
       font-size: 1rem;
-      max-width: 36ch;
+      max-width: 42ch;
       margin: 0 auto;
+    }
+
+    .credits {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .credits strong {
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+
+    .hero-credits {
+      margin-top: 1rem;
+      padding-top: 0.85rem;
+      border-top: 1px solid var(--border-subtle);
+      max-width: 28ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .credits-bar {
+      padding: 0.5rem 1rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.25);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .credits-bar strong {
+      color: var(--accent-amber);
+      font-weight: 600;
+    }
+
+    .panel-credits {
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .shell-footer-credits {
+      padding: 0.75rem 1rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.2);
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .shell-footer-credits strong {
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+
+    .page-footer {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .page-footer .credits {
+      font-size: 0.875rem;
+    }
+
+    .credits-inline {
+      font-weight: 400;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    .credits-dev {
+      display: block;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      opacity: 0.9;
+      margin-top: 0.25rem;
+      line-height: 1.4;
+    }
+
+    .credits-dev strong {
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .credits-bar .credits-dev {
+      margin-top: 0.15rem;
+      font-size: 0.625rem;
     }
 
     .shell {
@@ -560,6 +652,7 @@
       <span class="hero-badge">Study guide</span>
       <h1>Biology Study Guides</h1>
       <p>Skin, circulation, blood &amp; lymph, plus the muscular system — notes and practice in one file.</p>
+      <p class="credits hero-credits">Created by <strong>Abdullah Ahmed</strong> · 11A<span class="credits-dev">Coded and deployed by <strong>Seif Eldeen Ahmed</strong></span></p>
     </header>
 
     <h2 class="sr-only">Biology study guides: Skin and integumentary system, circulatory system, blood and lymphatic system, and muscular system — notes and Q&amp;A</h2>
@@ -568,21 +661,23 @@
       <div class="tabs" role="tablist" aria-label="Worksheet topics">
         <button type="button" class="tab-btn active" data-tab="skin" role="tab" aria-selected="true" aria-controls="panel-skin" id="tab-skin" onclick="switchTab(event, 'skin')">
           <span class="tab-emoji" aria-hidden="true">🫧</span>
-          <span>Skin &amp; Integumentary</span>
+          <span>Skin &amp; Integumentary <span class="credits-inline">· Abdullah Ahmed, 11A</span></span>
         </button>
         <button type="button" class="tab-btn" data-tab="circ" role="tab" aria-selected="false" aria-controls="panel-circ" id="tab-circ" onclick="switchTab(event, 'circ')">
           <span class="tab-emoji" aria-hidden="true">❤️</span>
-          <span>Circulatory System</span>
+          <span>Circulatory System <span class="credits-inline">· Abdullah Ahmed, 11A</span></span>
         </button>
         <button type="button" class="tab-btn" data-tab="blood" role="tab" aria-selected="false" aria-controls="panel-blood" id="tab-blood" onclick="switchTab(event, 'blood')">
           <span class="tab-emoji" aria-hidden="true">🩸</span>
-          <span>Blood &amp; Lymphatic</span>
+          <span>Blood &amp; Lymphatic <span class="credits-inline">· Abdullah Ahmed, 11A</span></span>
         </button>
         <button type="button" class="tab-btn" data-tab="muscle" role="tab" aria-selected="false" aria-controls="panel-muscle" id="tab-muscle" onclick="switchTab(event, 'muscle')">
           <span class="tab-emoji" aria-hidden="true">💪</span>
-          <span>Muscular System</span>
+          <span>Muscular System <span class="credits-inline">· Abdullah Ahmed, 11A</span></span>
         </button>
       </div>
+
+      <p class="credits-bar">Credits: <strong>Abdullah Ahmed</strong> · 11A<span class="credits-dev">Coded and deployed by <strong>Seif Eldeen Ahmed</strong></span></p>
 
       <div class="content">
         <!-- ===== SKIN PANEL ===== -->
@@ -591,7 +686,7 @@
           <button type="button" class="section-toggle open" onclick="toggleSection(this)" aria-expanded="true">
             <span class="toggle-left">
               <span class="toggle-icon" aria-hidden="true">📖</span>
-              Notes &amp; Key Concepts
+              Notes &amp; Key Concepts <span class="credits-inline">· Abdullah Ahmed, 11A</span>
             </span>
             <span class="arrow" aria-hidden="true">▼</span>
           </button>
@@ -656,12 +751,13 @@
                 <tr><td>Skin cancer</td><td>Abnormal growths or sores that don't heal</td><td>Excessive exposure to UV radiation (sun, tanning beds)</td></tr>
               </table>
             </div>
+            <p class="credits panel-credits">Credits: <strong>Abdullah Ahmed</strong> · 11A<span class="credits-dev">Coded and deployed by <strong>Seif Eldeen Ahmed</strong></span></p>
           </div>
 
           <button type="button" class="section-toggle" onclick="toggleSection(this)" aria-expanded="false">
             <span class="toggle-left">
               <span class="toggle-icon" aria-hidden="true">✅</span>
-              Questions &amp; Answers
+              Questions &amp; Answers <span class="credits-inline">· Abdullah Ahmed, 11A</span>
             </span>
             <span class="arrow" aria-hidden="true">▼</span>
           </button>
@@ -748,6 +844,7 @@
                 <div class="qa-a"><strong>Skin cancer</strong></div>
               </div>
             </div>
+            <p class="credits panel-credits">Credits: <strong>Abdullah Ahmed</strong> · 11A<span class="credits-dev">Coded and deployed by <strong>Seif Eldeen Ahmed</strong></span></p>
           </div>
         </div>
 
@@ -757,7 +854,7 @@
           <button type="button" class="section-toggle open" onclick="toggleSection(this)" aria-expanded="true">
             <span class="toggle-left">
               <span class="toggle-icon" aria-hidden="true">📖</span>
-              Notes &amp; Key Concepts
+              Notes &amp; Key Concepts <span class="credits-inline">· Abdullah Ahmed, 11A</span>
             </span>
             <span class="arrow" aria-hidden="true">▼</span>
           </button>
@@ -815,12 +912,13 @@
               <li>When BP falls → nervous system → neurotransmitters <em>relax</em> smooth muscles in vessel walls</li>
               <li>When BP rises → nervous system → neurotransmitters cause smooth muscles to <em>contract</em></li>
             </ul>
+            <p class="credits panel-credits">Credits: <strong>Abdullah Ahmed</strong> · 11A<span class="credits-dev">Coded and deployed by <strong>Seif Eldeen Ahmed</strong></span></p>
           </div>
 
           <button type="button" class="section-toggle" onclick="toggleSection(this)" aria-expanded="false">
             <span class="toggle-left">
               <span class="toggle-icon" aria-hidden="true">✅</span>
-              Questions &amp; Answers
+              Questions &amp; Answers <span class="credits-inline">· Abdullah Ahmed, 11A</span>
             </span>
             <span class="arrow" aria-hidden="true">▼</span>
           </button>
@@ -875,6 +973,7 @@
                 <div class="qa-a">The left side pumps blood through the <strong>entire body (systemic)</strong>; the right side only pumps to the lungs. More distance = more force needed.</div>
               </div>
             </div>
+            <p class="credits panel-credits">Credits: <strong>Abdullah Ahmed</strong> · 11A<span class="credits-dev">Coded and deployed by <strong>Seif Eldeen Ahmed</strong></span></p>
           </div>
         </div>
 
@@ -884,7 +983,7 @@
           <button type="button" class="section-toggle open" onclick="toggleSection(this)" aria-expanded="true">
             <span class="toggle-left">
               <span class="toggle-icon" aria-hidden="true">📖</span>
-              Notes &amp; Key Concepts
+              Notes &amp; Key Concepts <span class="credits-inline">· Abdullah Ahmed, 11A</span>
             </span>
             <span class="arrow" aria-hidden="true">▼</span>
           </button>
@@ -942,12 +1041,13 @@
               <li>High-fat diets → liver cells store extra cholesterol → stop making LDL receptors → cholesterol not removed → deposited in arteries</li>
               <li>Prevention: low-fat diet prevents LDL from rising; exercise keeps heart muscles strong</li>
             </ul>
+            <p class="credits panel-credits">Credits: <strong>Abdullah Ahmed</strong> · 11A<span class="credits-dev">Coded and deployed by <strong>Seif Eldeen Ahmed</strong></span></p>
           </div>
 
           <button type="button" class="section-toggle" onclick="toggleSection(this)" aria-expanded="false">
             <span class="toggle-left">
               <span class="toggle-icon" aria-hidden="true">✅</span>
-              Questions &amp; Answers
+              Questions &amp; Answers <span class="credits-inline">· Abdullah Ahmed, 11A</span>
             </span>
             <span class="arrow" aria-hidden="true">▼</span>
           </button>
@@ -1050,6 +1150,7 @@
                 <div class="qa-a">The lymph nodes become <strong>swollen</strong>.</div>
               </div>
             </div>
+            <p class="credits panel-credits">Credits: <strong>Abdullah Ahmed</strong> · 11A<span class="credits-dev">Coded and deployed by <strong>Seif Eldeen Ahmed</strong></span></p>
           </div>
         </div>
 
@@ -1059,7 +1160,7 @@
           <button type="button" class="section-toggle open" onclick="toggleSection(this)" aria-expanded="true">
             <span class="toggle-left">
               <span class="toggle-icon" aria-hidden="true">📖</span>
-              Notes &amp; Key Concepts
+              Notes &amp; Key Concepts <span class="credits-inline">· Abdullah Ahmed, 11A</span>
             </span>
             <span class="arrow" aria-hidden="true">▼</span>
           </button>
@@ -1127,12 +1228,13 @@
               <div class="flow-item">Body part moves</div>
             </div>
             <div class="note-box">Without tendons → we would NOT be able to move. Each effect becomes the cause of the next event in the chain.</div>
+            <p class="credits panel-credits">Credits: <strong>Abdullah Ahmed</strong> · 11A<span class="credits-dev">Coded and deployed by <strong>Seif Eldeen Ahmed</strong></span></p>
           </div>
 
           <button type="button" class="section-toggle" onclick="toggleSection(this)" aria-expanded="false">
             <span class="toggle-left">
               <span class="toggle-icon" aria-hidden="true">✅</span>
-              Questions &amp; Answers
+              Questions &amp; Answers <span class="credits-inline">· Abdullah Ahmed, 11A</span>
             </span>
             <span class="arrow" aria-hidden="true">▼</span>
           </button>
@@ -1219,10 +1321,16 @@
                 <div class="qa-a"><strong>Skeletal muscle</strong> containing red (slow-twitch) muscle fibers — striated, many nuclei, many mitochondria.</div>
               </div>
             </div>
+            <p class="credits panel-credits">Credits: <strong>Abdullah Ahmed</strong> · 11A<span class="credits-dev">Coded and deployed by <strong>Seif Eldeen Ahmed</strong></span></p>
           </div>
         </div>
       </div>
+      <footer class="shell-footer-credits">Study guide by <strong>Abdullah Ahmed</strong> · 11A<span class="credits-dev">Coded and deployed by <strong>Seif Eldeen Ahmed</strong></span></footer>
     </div>
+
+    <footer class="page-footer">
+      <p class="credits">© <strong>Abdullah Ahmed</strong> · Class 11A · All content compiled for study purposes<span class="credits-dev">Coded and deployed by <strong>Seif Eldeen Ahmed</strong></span></p>
+    </footer>
   </div>
 
   <script>
